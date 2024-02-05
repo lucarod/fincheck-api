@@ -67,13 +67,12 @@ export class BankAccountsService {
       bankAccountId,
     );
 
-    const { name, initialBalance, type, color } = updateBankAccountDto;
+    const { name, type, color } = updateBankAccountDto;
 
     return this.bankAccountsRepo.update({
       where: { id: bankAccountId },
       data: {
         name,
-        initialBalance,
         type,
         color,
       },
